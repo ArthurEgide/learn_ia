@@ -1,0 +1,10 @@
+# Self learning about Artificial Inteligence
+
+The purpose of this repository is to record developments in my personal studies on artificial intelligence. It will feature a division between portfolios in relation to the division of study areas.
+
+Although it may seem like a project, it should not be seen as one. In fact, it should be viewed as a large binder with notes, insights and challenges, containing correct and incorrect practices of the knowledge obtained
+
+# makefile
+The makefile creates a docker container according to which project I am currently studying. Therefore, I can have several environments without cluttering my computer with different prerequisites between projects. Facilitating cleaning after studies.
+
+If you use Visual Studio Code, I recommend using the extension "https://code.visualstudio.com/docs/remote/ssh", so it is possible to debug the codes inside the containers.
