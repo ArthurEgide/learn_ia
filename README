@@ -8,3 +8,10 @@ Although it may seem like a project, it should not be seen as one. In fact, it s
 The makefile creates a docker container according to which project I am currently studying. Therefore, I can have several environments without cluttering my computer with different prerequisites between projects. Facilitating cleaning after studies.
 
 If you use Visual Studio Code, I recommend using the extension "https://code.visualstudio.com/docs/remote/ssh", so it is possible to debug the codes inside the containers.
+
+# Organization
+
+TODO
+...
+
+The plots of projects will not be commit and is on .gitignore also. Recommend to create file plot to see the results of code, to don't need to create harders configure, KISS.
