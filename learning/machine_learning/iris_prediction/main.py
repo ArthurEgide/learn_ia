@@ -49,7 +49,7 @@ iris_pairs.savefig(f"{PLOT_BASE_PATH}/iris_pair_1.png")
 C = 1.0  # SVM regularization parameter
 clf = svm.SVC(kernel='linear', C=C)
 clf.fit(X_train, y_train)
-clf.predict(X_test)
+y_pred = clf.predict(X_test) 
 scikit_score = clf.score(X_test, y_test)
 
 # Don't use this never loL. Only for didatic learning
@@ -58,7 +58,7 @@ results_pairs = []
 for source_index, source_vector in enumerate(X):
   for test_index, test_vector in enumerate(X_test):
     if((test_vector == source_vector).all()):
-      results_pairs.append([y[source_index], y_test[test_index]])
+      results_pairs.append([y[source_index], y_pred[test_index]])
 
 success = 0
 size = len(X_test)
@@ -68,7 +68,7 @@ for rp in results_pairs:
 
 manual_score = success/size
 
-# high stonks 100%? 
-# I don't know why is wrong :/
-# I'll back to fix it when i found the explain
+# Yeah, i found! I just used the wrong variable loL
 print(f"Scikit Score: {scikit_score}\nManual Score: {manual_score}")
+from sklearn.metrics import classification_report
+print(classification_report(y_test, y_pred, target_names=iris.target_names))
