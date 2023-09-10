@@ -29,3 +29,10 @@ run_main_container: choice_project
 	docker run -v ./$$PROJECT_PATH:/$$PROJECT_NAME --rm $$PROJECT_NAME python main.py
 	rm _tmp
 
+run_improved_main_container: choice_project
+	@read PROJECT_PATH < _tmp; \
+	PROJECT_NAME=$(shell cat $(project_picker_tmp_file) | rev | cut -d'/' -f1 | rev); \
+	docker run -v ./$$PROJECT_PATH:/$$PROJECT_NAME --rm $$PROJECT_NAME python improved_main.py
+	rm _tmp
+
+#TODO: Make configurable runs about different ways to same technic

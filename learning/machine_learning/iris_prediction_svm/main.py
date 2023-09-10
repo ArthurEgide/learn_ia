@@ -37,12 +37,12 @@ random_seed = 3
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=dataset_test_percent*(10**-2), random_state=random_seed)
 
 # Getting the pairplot to figure out the relations between features
-iris_pairs = sns.pairplot(
-  data = iris_df[['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'species']],
-  hue='species'
-)
-iris_pairs.get_figure()
-iris_pairs.savefig(f"{PLOT_BASE_PATH}/iris_pair_1.png") 
+# iris_pairs = sns.pairplot(
+#   data = iris_df[['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'species']],
+#   hue='species'
+# )
+# iris_pairs.get_figure()
+# iris_pairs.savefig(f"{PLOT_BASE_PATH}/iris_pair_1.png") 
 
 
 # Model usage and results

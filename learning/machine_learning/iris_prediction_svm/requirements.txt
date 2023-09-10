@@ -3,3 +3,4 @@ pandas
 tk
 matplotlib
 seaborn
+plotly
